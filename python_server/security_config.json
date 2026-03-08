@@ -1,0 +1,9 @@
+{
+    "_comment": "ENTERPRISE SECURITY CONFIGURATION. This file defines the hard security boundaries for the MCP Server. Unlike .env, this file does not contain secrets and can be committed to version control.",
+    "blocked_xdm_prefixes": [
+        "person.ssn",
+        "person.financial",
+        "_customOrg.highlyConfidential",
+        "personalEmail.password"
+    ]
+}

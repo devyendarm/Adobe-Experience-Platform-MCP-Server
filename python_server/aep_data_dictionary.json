@@ -1,0 +1,66 @@
+{
+  "_comment": "BUSINESS DATA DICTIONARY (BDD). This file maps exact AEP XDM JSON paths to plain-English business descriptions. The LLM relies on this file via the discover_xdm_schema tool to learn the enterprise's custom schemas.",
+  "schemas": [
+    {
+      "path": "person.name.firstName",
+      "type": "string",
+      "business_description": "Standard first name of the customer. Use this for general demographic inquiries.",
+      "keywords": [
+        "name",
+        "first",
+        "demographics"
+      ]
+    },
+    {
+      "path": "person.name.lastName",
+      "type": "string",
+      "business_description": "Standard last name of the customer.",
+      "keywords": [
+        "name",
+        "last",
+        "demographics"
+      ]
+    },
+    {
+      "path": "personalEmail.address",
+      "type": "string",
+      "business_description": "The primary email address on file for the user.",
+      "keywords": [
+        "email",
+        "contact"
+      ]
+    },
+    {
+      "path": "_customTenant.loyalty.tier",
+      "type": "string",
+      "business_description": "The custom enterprise loyalty tier. Active source of truth for rewards. Values can be ['Silver', 'Gold', 'Platinum'].",
+      "keywords": [
+        "loyalty",
+        "rewards",
+        "tier",
+        "status"
+      ]
+    },
+    {
+      "path": "person.loyaltytier",
+      "type": "string",
+      "business_description": "DO NOT USE. Legacy standard AEP field. We use _customTenant.loyalty.tier instead.",
+      "keywords": [
+        "loyalty",
+        "legacy"
+      ]
+    },
+    {
+      "path": "_customTenant.churnProbabilityScore",
+      "type": "number",
+      "business_description": "A predictive score between 0.0 and 1.0 indicating likelihood of churning in the next 30 days. Scores > 0.8 are high risk.",
+      "keywords": [
+        "churn",
+        "risk",
+        "predictive",
+        "score",
+        "probability"
+      ]
+    }
+  ]
+}
